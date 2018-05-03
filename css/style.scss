@@ -99,6 +99,7 @@ h2{
 
     i{
         color: $primaryColour;
+        font-size: 1.4em;
     }
 
     h3{
@@ -836,14 +837,12 @@ footer{
         padding: 0 250px;
     }
 
-    // .single-img{
-    //     .hero-banner-content{
-    //         width: 30%
-    //     }
-    //     .single-img-container{
-    //         width: 70%;
-    //     }
-    // }
+    .diagram{
+        img{
+            margin-top:30px;
+            width: 75%;
+        }
+    }
 
 }
 
