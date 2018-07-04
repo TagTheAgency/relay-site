@@ -52,8 +52,7 @@ h2{
 	display: flex;
 	flex-direction: column;
 	font-size: 1.3em;
-	align-items: center;
-    flex-wrap: wrap;
+  flex-wrap: wrap;
 
 }
 
@@ -92,6 +91,98 @@ h2{
 	background-size: cover;
 	background-repeat: no-repeat;
 	transition-duration: 200ms;
+}
+
+.pricing-container{
+
+    margin-top: 30px;
+
+    .flex-col{
+        overflow: hidden;
+        border-radius: 8px;
+        padding: 0;
+        width: 90%;
+        position: relative;
+        margin: auto;
+        margin-bottom: 30px;
+        box-shadow: 0px 0px 5px rgba(#000000, 0.07);
+        transition-duration: 600ms;
+        cursor: pointer;
+        padding-bottom: 80px;
+        justify-content: center;
+
+        .btn-container{
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            padding-bottom: 20px;
+
+            .btn{
+                border-radius: 30px;
+                display: inline-block;
+                font-size: 1em;
+                padding: 10px 50px;
+                background-color: $primaryColour;
+                color: $white;
+                opacity: 1;
+            }
+        }
+
+
+        p{
+            max-width: none;
+            font-size: 0.7em;
+            padding: 20px 15px;
+            border-bottom: 1px solid #f4f4f4;
+            font-weight: 500;
+            color: #181818;
+
+            &:last-of-type{
+                border-bottom: none;
+            }
+        }
+    }
+
+    .pricing-header{
+        width: 100%;
+        background-color: $primaryColour;
+        color: $white;
+        padding: 20px 0;
+
+        h4{
+            width: 100%;
+            font-size: 0.9em;
+            font-weight: 400;
+        }
+
+
+        h3{
+            width: 100%;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 7px;
+            font-size: 1.3em;
+        }
+    }
+
+    .pricing-footer {
+      width: 100%;
+      background-color: $primaryColour;
+      color: $white;
+      position: absolute;
+      bottom: 0px;
+
+      h4{
+          width: 100%;
+          font-size: 0.9em;
+          font-weight: 400;
+      }
+    }
+
+    .pricing-info{
+        margin-bottom: 40px;
+    }
+
 }
 
 .feature-grid{
@@ -449,6 +540,11 @@ ul{
     align-items: center;
 }
 
+.price-row{
+    padding-top: 24px;
+    background-color: #ff8b8b;
+}
+
 // Contact form
 
 .contact-form{
@@ -562,6 +658,29 @@ footer{
 
 @media screen and (min-width: 599px) {
 
+  .pricing-section{
+      .flex-row{
+          flex-direction: column;
+      }
+
+      .pricing-header{
+          h3{
+              font-size: 1em;
+          }
+
+          h4{
+              font-size: 0.8em;
+          }
+      }
+
+      .pricing-container{
+          p{
+              padding: 19px 12px;
+              font-size: 0.6em;
+          }
+      }
+  }
+
 	.flex-row{
 		flex-direction: row;
 		font-size: 2em;
@@ -635,9 +754,68 @@ footer{
 
 @media screen and (min-width: 899px) {
 
-    .hero-banner-wrapper{
-        justify-content: center;
-    }
+  .pricing-section{
+
+        .flex-row{
+            flex-direction: row
+        }
+        margin-bottom: 30px;
+
+        .pricing-container{
+
+            justify-content: space-between;
+
+            .flex-col{
+                flex: none;
+                width: 48%;
+                position: relative;
+                margin: 0;
+                margin-bottom: 1.3em;
+
+                .btn-container{
+                    padding-bottom: 40px;
+
+                    .btn{
+                        border-radius: 50px;
+                        display: inline-block;
+                        font-size: 0.6em;
+                        padding: 10px 20px;
+                        opacity: 1;
+
+                        &:hover{
+                            opacity: 0.5;
+                        }
+                    }
+                }
+
+            }
+
+            .pricing-header{
+                background-color: $primaryColour;
+
+                h4{
+                    font-size: 0.7em;
+                    font-weight: 400;
+                }
+
+
+                h3{
+                    letter-spacing: 4px;
+                    font-size: 0.7em;
+                }
+            }
+
+            p{
+                padding: 18px 15px;
+                font-size: 0.6em;
+            }
+        }
+  }
+
+
+  .hero-banner-wrapper{
+    justify-content: center;
+  }
 
 	.hero-banner-content{
 		padding: 0 30px;
@@ -654,17 +832,17 @@ footer{
 		}
 	}
 
-    .portrait{
-        width: auto;
-        height: 450px;
-        display: flex;
-        justify-content: center;
+  .portrait{
+      width: auto;
+      height: 450px;
+      display: flex;
+      justify-content: center;
 
-        img{
-            width: auto !important;
-            height: 100%;
-        }
-    }
+      img{
+          width: auto !important;
+          height: 100%;
+      }
+  }
 
 	.split-hero-img{
 		width: 100%;
@@ -770,6 +948,52 @@ footer{
 
 
 @media screen and (min-width: 1100px) {
+
+  .pricing-section{
+
+          .flex-row{
+              flex-direction: row
+          }
+
+          .pricing-container{
+
+              .flex-col{
+                  width: 32%;
+                  margin-bottom: 0;
+
+                  .btn-container{
+                      padding-bottom: 40px;
+
+                      .btn{
+                          border-radius: 50px;
+                          font-size: 0.6em;
+                          padding: 10px 20px;
+
+                          &:hover{
+                              opacity: 0.5;
+                          }
+                      }
+                  }
+              }
+
+              .pricing-header{
+
+                  h4{
+                      font-size: 0.8em;
+                      font-weight: 400;
+                  }
+
+                  h3{
+                      letter-spacing: 4px;
+                      font-size: 0.9em;
+                  }
+              }
+
+              p{
+                  font-size: 0.5em;
+              }
+          }
+      }
 
     .flex-col{
 
